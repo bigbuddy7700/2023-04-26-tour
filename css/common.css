@@ -24,13 +24,89 @@ body {
     line-height: 1.5;
 }
 
-.img {
-    display: none;
-}
-
 .wrap {}
 
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb li a {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+}
+
+.gnb li a:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #00d6ef;
+}
+
+.gnb li a:hover {
+    color: #00d6ef;
+}
+
+.gnb li.on a {
+    color: #00d6ef;
+}
+
+.gnb li.on a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #00d6ef; 
+}
+
+.header .user {
+    width: 22px;
+    height: 25px;
+    margin-left: 40px;
+}
+
+.header .user .img {
+    width: 100%;
+    display: block;
+}
+
 .hero {
-    background-color: yellow;
-    height: calc(100vh - 90px);
+    background-color: #999;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.hero .text_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .social {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero .img {
+    width: 30px;
 }
